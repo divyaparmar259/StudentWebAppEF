@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+         
+            <h3><b> Add Student..</b></h3>
+
+            <form [formGroup]="studentinsertForm">
+
+             
+                <div class="form-group">
+                  
+                    <input type="text" placeholder="StudentName" formControlName="studentName" class="form-control" 
+                    [ngClass]="{ 'is-invalid': submitted &amp;&amp; studentinsertForm.controls.studentName.errors }" />
+                    <div *ngIf="submitted &amp;&amp; studentinsertForm.controls.studentName.errors" class="text-danger">
+                        <div *ngIf="studentinsertForm.controls.studentName.errors.required"> Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    
+                    <input type="text" formControlName="studentMobileNo" class="form-control" placeholder="MobileNo" 
+                    [ngClass]="{ 'is-invalid': submitted &amp;&amp; studentinsertForm.controls.studentMobileNo.errors }"  />
+                    <div *ngIf="submitted &amp;&amp; studentinsertForm.controls.studentMobileNo.errors" class="text-danger">
+                        <div *ngIf="studentinsertForm.controls.studentMobileNo.errors.required">MobileNo is Required</div>
+                        <div *ngIf="studentinsertForm.controls.studentMobileNo.errors.minlength"> 10 character required</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                   
+                    <input type="text" formControlName="studentEmail" placeholder="Email address" class="form-control" 
+                    [ngClass]="{ 'is-invalid': submitted &amp;&amp; studentinsertForm.controls.studentEmail.errors }" />
+                    <div *ngIf="submitted &amp;&amp; studentinsertForm.controls.studentEmail.errors" class="text-danger">
+                        <div *ngIf="studentinsertForm.controls.studentEmail.errors.required">Email is required</div>
+                        <div *ngIf="studentinsertForm.controls.studentEmail.errors.email">Email must be a valid email address</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                  
+                    <input type="text" placeholder="Enter Cource Name" formControlName="studentCource" class="form-control" 
+                    [ngClass]="{ 'is-invalid': submitted &amp;&amp; studentinsertForm.controls.studentCource.errors }" />
+                    <div *ngIf="submitted &amp;&amp; studentinsertForm.controls.studentCource.errors" class="text-danger">
+                        <div *ngIf="studentinsertForm.controls.studentCource.errors.required"> This is required</div>
+                    </div>
+                </div>
+                    <div class="form-group">
+                  
+                        <input type="text" placeholder="studentFees" formControlName="studentFees" class="form-control" 
+                        [ngClass]="{ 'is-invalid': submitted &amp;&amp; studentinsertForm.controls.studentFees.errors }" />
+                        <div *ngIf="submitted &amp;&amp; studentinsertForm.controls.studentFees.errors" class="text-danger">
+                            <div *ngIf="studentinsertForm.controls.studentFees.errors.required"> This is required</div>
+                        </div>
+              
+                
+                </div>
+      
+
+                <div class="form-group">
+                    <button class="btn btn-primary" (click)="insertData()">Insert</button>
+                
+                     </div>
+                
+            </form>
+           
+                    </div>
+    </div>
+</div>
+

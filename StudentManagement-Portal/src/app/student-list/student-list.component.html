@@ -1,0 +1,25 @@
+<div class="container py-5">  
+    <h3 class="text-center text-uppercase">List of Students</h3>  
+    <table class="table table-bordered table-striped">  
+        <thead>  
+            <tr class="text-center text-uppercase">  
+                <th> No</th>  
+                <th>Student Name</th>  
+                <th>Student MobileNo</th>  
+                <th>Student EmailId</th>  
+                <th>Student Cource</th>  
+                <th>Student Fees</th>  
+              </tr>  
+        </thead>  
+        <tbody>  
+          <tr *ngFor="let emp of students">  
+            <td>{{emp.StudentId}}</td>  
+            <td>{{emp.StudentName}}</td>  
+            <td>{{emp.StudentMobileNo}}</td>  
+            <td>{{emp.StudentEmailId}}</td>  
+            <td>{{emp.StudentCource}}</td>  
+            <td>{{emp.StudentFees}}</td>  
+          </tr>  
+        </tbody>  
+      </table>  
+    </div> 
